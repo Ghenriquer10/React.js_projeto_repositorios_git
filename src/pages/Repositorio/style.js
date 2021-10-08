@@ -104,7 +104,7 @@ export const IssuesList = styled.ul`
         margin-left: 10px;
         margin-right: 10px;
         border-radius: 50%;
-        border: 2px solid slateblue;
+        border: 1px solid slateblue;
     }
 
     div{
@@ -129,10 +129,50 @@ export const IssuesList = styled.ul`
     span{
         background: black;
         color: white;
-        padding: 3px;
-        font-size: 10px;
+        padding: 4px;
+        font-size: 8px;
         margin-left: 5px;
         border-radius: 10px;
     }
 
+`;
+
+export const PagesList = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+        background: steelblue;
+        border: none;
+        padding: 5px;
+        color: #FFF;
+        border-radius: 5px;
+        width: 24%;
+
+        &:disabled{
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
+`;
+
+export const FilterList = styled.div`
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+
+    button{
+        margin-right: 10px;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        background: #DCDCDC;
+        color: black;
+
+        &:nth-child(${props => props.active + 1}){
+            background: steelblue;
+            color: #FFF;
+        }
+    }
 `;
